@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+
+<script>
+function myBrowser(){
+	var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+	document.write(userAgent);
+	if (navigator.userAgent.match(/edge/i)) {
+		return "Edge"
+	};//判断是否Edge浏览器
+	if (navigator.userAgent.match(/opera/i)) {
+		return "Opera"
+	}; //判断是否Opera浏览器
+	if (navigator.userAgent.match(/firefox/i)) {
+		return "Firefox";
+	} //判断是否Firefox浏览器
+	if (navigator.userAgent.match(/chrome/i)){
+		return "Chrome";
+	} //判断是否Safari浏览器
+	if (navigator.userAgent.match(/safari/i)) {
+		 return "Safari";
+	} //判断是否Safari浏览器
+	if (navigator.userAgent.match(/compatible/i) && navigator.userAgent.match(/msie/i) && !isOpera) {
+		 return "IE";
+	}; //判断是否IE浏览器
+}
+
+//以下是调用上面的函数
+var mb = myBrowser();
+ if ("Edge" == mb) {
+	 alert("我是 Edge");
+ }
+ if ("IE" == mb) {
+	 alert("我是 IE");
+ }
+ if ("Firefox" == mb) {
+	 alert("我是 Firefox");
+ }
+ if ("Chrome" == mb) {
+	 alert("我是 Chrome");
+ }
+ if ("Opera" == mb) {
+	 alert("我是 Opera");
+ }
+ if ("Safari" == mb) {
+	alert("我是 Safari");
+ }
+
+</script>
+
+ <body>
+  
+ </body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+ <script src="DateFormat.js"></script>
+  <script>
+
+	//当前日期
+	var now = new Date();
+	//格式化类
+	var dateformat = new DateFormat()
+
+	//随机数 1-999
+	var m = 999;
+	var n = 1;
+	var w = m - n;
+    var num = Math.round(Math.random()*w+n);
+
+	//订单号
+	var orderId = dateformat.format(now,"yyyyMMdd")+num;
+
+
+	document.write(orderId);  
+  </script>
+ </body>
+</html>
